@@ -158,8 +158,57 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
+
+
+" --  Section Vim-plug
+
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+Plug 'cocopon/iceberg.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'ianks/vim-tsx'
+
+" Initialize plugin system
+call plug#end()
+
+
+
+" -- Section Configurate NerdTree
+
+" Open NerdTree automatically
+autocmd vimenter * NERDTree
+
+" Open NerdTree Ctr+n
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only nerdtree left
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+
+
+
+" -- Colors
+
+" Sets colors to 256
+set t_Co=256
+
+" Tell vim to use colors in the terminal
+set termguicolors
+
 " Sets colosscheme
 colorscheme iceberg
-" Disables Background Color Erase
+
+" Disables Background Color Erase - DO THIS LAST
 " https://sunaku.github.io/vim-256color-bce.html
 set t_ut=
