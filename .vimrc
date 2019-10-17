@@ -170,9 +170,14 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'cocopon/iceberg.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
+
+"Fuzzy finder
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
@@ -184,7 +189,6 @@ call plug#end()
 
 
 " -- Section Configurate NerdTree
-
 " Open NerdTree automatically
 autocmd vimenter * NERDTree
 
@@ -194,6 +198,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if only nerdtree left
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+
+
+" -- Section FZF- fuzzy finder configuration
+map ; :Files<CR>
 
 
 
