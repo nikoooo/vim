@@ -173,7 +173,11 @@ Plug 'cocopon/iceberg.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'tmsvg/pear-tree'
 Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+Plug 'valloric/youcompleteme'
+Plug 'yggdroot/indentline'
 
 "Fuzzy finder
 Plug 'junegunn/fzf'
